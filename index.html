@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Ingénieur RSI | Réseaux, Systèmes & Cybersécurité</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.3);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- ======================================================== -->
+  <!-- NAVIGATION BAR                                           -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 p-[1px] shadow-lg shadow-sky-500/20 group-hover:scale-105 transition">
+          <div class="w-full h-full bg-slate-950 rounded-xl flex items-center justify-center">
+            <i data-lucide="shield" class="w-5 h-5 text-sky-400"></i>
+          </div>
+        </div>
+        <div>
+          <span class="font-bold text-base tracking-tight text-white group-hover:text-sky-400 transition">Portfolio RSI</span>
+          <span class="block text-[10px] text-slate-400 font-mono">Systèmes & Cybersécurité</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="#projets" class="hover:text-sky-400 transition">Projets Réalisés</a>
+        <a href="#competences" class="hover:text-sky-400 transition">Compétences</a>
+        <a href="#terminal" class="hover:text-sky-400 transition flex items-center gap-1.5">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Terminal CLI</span>
+        </a>
+        <a href="#a-propos" class="hover:text-sky-400 transition">À Propos</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Disponible</span>
+        </span>
+        <a href="#contact" class="px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-semibold text-xs shadow-md shadow-sky-500/20 transition active:scale-95">
+          Me Contacter
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- HERO SECTION                                             -->
+  <!-- ======================================================== -->
+  <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden border-b border-slate-900">
+    <!-- Background glow spheres -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-sky-500/10 to-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        
+        <!-- Profile Picture & Name Tag -->
+        <div class="flex flex-col items-center justify-center gap-3">
+          <div class="relative group">
+            <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-3xl p-1 bg-gradient-to-tr from-sky-400 via-indigo-500 to-emerald-400 shadow-2xl shadow-sky-500/25 group-hover:scale-105 transition-all duration-300">
+              <img src="/profile.jpg" alt="Fuller Douala Pierre Yvan" class="w-full h-full object-cover rounded-[22px] bg-slate-900 shadow-inner">
+            </div>
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-slate-900/95 border border-emerald-500/40 text-emerald-400 font-mono text-[11px] font-bold shadow-lg whitespace-nowrap flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Fuller Douala Pierre Yvan</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Main Headline -->
+        <div class="pt-2">
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+            Fuller Douala Pierre Yvan
+          </h1>
+          <p class="text-lg sm:text-xl font-bold bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent mt-2">
+            Ingénieur Réseaux, Systèmes & Cybersécurité
+          </p>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Spécialisé dans l'architecture réseau, l'audit de vulnérabilités périmétriques et la supervision temps réel (SRE). Découvrez et <strong>testez directement en ligne</strong> mes réalisations techniques ci-dessous.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <a href="#projets" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold text-sm shadow-xl shadow-sky-500/25 transition active:scale-95 flex items-center justify-center gap-2">
+            <span>Explorer & Tester les Projets</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="#terminal" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-mono text-xs font-semibold transition flex items-center justify-center gap-2">
+            <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
+            <span>Lancer la Console Interactive</span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Ribbon -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 border-t border-slate-900 text-center font-mono">
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+            <span class="block text-2xl font-black text-sky-400">3+</span>
+            <span class="text-[11px] text-slate-400">Applications Déployées</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+            <span class="block text-2xl font-black text-emerald-400">100%</span>
+            <span class="text-[11px] text-slate-400">Code Fonctionnel</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+            <span class="block text-2xl font-black text-indigo-400">Sockets</span>
+            <span class="text-[11px] text-slate-400">TCP & Temps Réel SSE</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+            <span class="block text-2xl font-black text-violet-400">RFC</span>
+            <span class="text-[11px] text-slate-400">Standards & Normes RSI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- PROJETS SHOWCASE SECTION                                 -->
+  <!-- ======================================================== -->
+  <section id="projets" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
+      <div>
+        <div class="flex items-center gap-2 text-xs font-mono text-sky-400 uppercase tracking-widest">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span>Réalisations Techniques</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Projets en Réseaux, Systèmes & Sécurité</h2>
+        <p class="text-sm text-slate-400 mt-1 max-w-2xl">
+          Chaque projet est conçu pour répondre à un besoin d'ingénierie réel, avec une architecture optimisée et une interface web interactive.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 font-mono text-xs">
+        <button onclick="filterCategory('all')" id="filter-btn-all" class="px-3 py-1.5 rounded-lg bg-sky-600 text-white font-semibold transition shrink-0">Tous</button>
+        <button onclick="filterCategory('sec')" id="filter-btn-sec" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 transition shrink-0">Cybersécurité</button>
+        <button onclick="filterCategory('sys')" id="filter-btn-sys" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 transition shrink-0">Supervision / SRE</button>
+        <button onclick="filterCategory('net')" id="filter-btn-net" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 transition shrink-0">Architecture IP</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- ================= PROJECT 1 : NETAUDIT ================= -->
+      <div class="project-card group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all duration-300 flex flex-col justify-between" data-cat="sec">
+        <div>
+          <!-- Visual Header / Banner -->
+          <div class="h-48 bg-gradient-to-tr from-slate-950 via-emerald-950/40 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">PROJET 1 • CYBER</span>
+              <span class="text-xs font-mono text-slate-400">Port 3000</span>
+            </div>
+            <div class="z-10">
+              <h3 class="text-2xl font-black text-white group-hover:text-emerald-400 transition flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-6 h-6 text-emerald-400"></i>
+                <span>NetAudit</span>
+              </h3>
+              <p class="text-xs text-slate-300 font-mono mt-1">Scanner Réseau & Audit de Vulnérabilités</p>
+            </div>
+            <!-- Background icon watermarking -->
+            <i data-lucide="crosshair" class="w-32 h-32 absolute -right-4 -bottom-6 text-emerald-500/5 group-hover:scale-110 transition duration-500"></i>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Moteur de reconnaissance périmétrique basé sur des sockets TCP non-bloquants. Analyse les ports ouverts, intercepte les bannières logicielles (*banner grabbing*), calcule un **Score de Sécurité (0-100)** avec notation par grade (**A-F**) et génère un plan de durcissement (*Hardening*).
+            </p>
+
+            <!-- Sub-feature Highlight -->
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-emerald-300 flex items-center gap-2">
+              <i data-lucide="wifi" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span><strong>Inclus :</strong> Scanner ARP pour trouver les IP d'amis sur le Wi-Fi en 1 clic.</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Node.js Sockets</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">SSE Temps Réel</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Analyse CVEs</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Export PDF / JSON</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer / Modal trigger -->
+        <div class="p-6 pt-4 border-t border-slate-800/60 mt-auto flex items-center justify-between gap-3">
+          <button onclick="openProjectModal('netaudit')" class="w-full px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 text-center transition flex items-center justify-center gap-2 active:scale-95">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span>Voir le Projet & Démo Interactive</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 2 : SYSPULSE ================= -->
+      <div class="project-card group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all duration-300 flex flex-col justify-between" data-cat="sys">
+        <div>
+          <!-- Visual Header / Banner -->
+          <div class="h-48 bg-gradient-to-tr from-slate-950 via-indigo-950/40 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold">PROJET 2 • SRE</span>
+              <span class="text-xs font-mono text-slate-400">Supervision SRE</span>
+            </div>
+            <div class="z-10">
+              <h3 class="text-2xl font-black text-white group-hover:text-indigo-400 transition flex items-center gap-2">
+                <i data-lucide="activity" class="w-6 h-6 text-indigo-400"></i>
+                <span>SysPulse</span>
+              </h3>
+              <p class="text-xs text-slate-300 font-mono mt-1">Supervision Système & Gestionnaire de Tâches</p>
+            </div>
+            <!-- Background icon watermarking -->
+            <i data-lucide="cpu" class="w-32 h-32 absolute -right-4 -bottom-6 text-indigo-500/5 group-hover:scale-110 transition duration-500"></i>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Dashboard d'observabilité haute fréquence cadencé à 1 seconde via **Server-Sent Events (SSE)**. Affiche les courbes dynamiques de charge CPU/RAM (fenêtre glissante 30s), les débits réseau réels (RX/TX Ko/s), l'occupation disque, et un gestionnaire de processus avec arrêt forcé sécurisé (*Kill Task*).
+            </p>
+
+            <!-- Sub-feature Highlight -->
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-indigo-300 flex items-center gap-2">
+              <i data-lucide="alert-octagon" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+              <span><strong>Inclus :</strong> Alerting proactif automatique si CPU ou RAM > 85%.</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Chart.js TSDB</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Flux SSE (1000ms)</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Task Manager Web</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">SRE Golden Signals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer / Modal trigger -->
+        <div class="p-6 pt-4 border-t border-slate-800/60 mt-auto flex items-center justify-between gap-3">
+          <button onclick="openProjectModal('syspulse')" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/20 text-center transition flex items-center justify-center gap-2 active:scale-95">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span>Voir le Projet & Démo Interactive</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 3 : IP-MASTER ================= -->
+      <div class="project-card group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all duration-300 flex flex-col justify-between" data-cat="net">
+        <div>
+          <!-- Visual Header / Banner -->
+          <div class="h-48 bg-gradient-to-tr from-slate-950 via-sky-950/40 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+            <div class="flex items-center justify-between z-10">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">PROJET 3 • RÉSEAU</span>
+              <span class="text-xs font-mono text-slate-400">Architecture IP</span>
+            </div>
+            <div class="z-10">
+              <h3 class="text-2xl font-black text-white group-hover:text-sky-400 transition flex items-center gap-2">
+                <i data-lucide="network" class="w-6 h-6 text-sky-400"></i>
+                <span>IP-Master</span>
+              </h3>
+              <p class="text-xs text-slate-300 font-mono mt-1">Architecture d'Adressage IPAM & VLSM</p>
+            </div>
+            <!-- Background icon watermarking -->
+            <i data-lucide="split" class="w-32 h-32 absolute -right-4 -bottom-6 text-sky-500/5 group-hover:scale-110 transition duration-500"></i>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Plateforme d'ingénierie d'adressage IPv4. Intègre un calculateur CIDR avec conversion binaire 32 bits pédagogique, un algorithme d'optimisation VLSM évitant tout gaspillage d'adresses, et un gestionnaire IPAM avec **Heatmap visuelle des 254 adresses** d'un sous-réseau.
+            </p>
+
+            <!-- Sub-feature Highlight -->
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-sky-300 flex items-center gap-2">
+              <i data-lucide="grid" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span><strong>Inclus :</strong> Heatmap 254 adresses avec assignation d'IP en 1 clic.</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Bitwise Math 32b</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Algorithme VLSM</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Registre IPAM</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">RFC 791 / 1918</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer / Modal trigger -->
+        <div class="p-6 pt-4 border-t border-slate-800/60 mt-auto flex items-center justify-between gap-3">
+          <button onclick="openProjectModal('ipmaster')" class="w-full px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-lg shadow-sky-600/20 text-center transition flex items-center justify-center gap-2 active:scale-95">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span>Voir le Projet & Démo Interactive</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- INTERACTIVE CLI TERMINAL SECTION (WOW FACTOR)            -->
+  <!-- ======================================================== -->
+  <section id="terminal" class="py-16 bg-slate-900/40 border-y border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="text-center space-y-2">
+        <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Console Shell Interactive</span>
+        <h2 class="text-2xl font-black text-white">Terminal SysAdmin & Explorateur de Compétences</h2>
+        <p class="text-xs text-slate-400">Tapez des commandes pour interagir directement avec mon profil en ligne de commande.</p>
+      </div>
+
+      <!-- Terminal Window -->
+      <div class="rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs">
+        <!-- Titlebar -->
+        <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+            <span class="text-[11px] text-slate-400 ml-2">rsi-terminal@teko: ~ (bash)</span>
+          </div>
+          <span class="text-[10px] text-slate-500">Tapez 'help' pour la liste des commandes</span>
+        </div>
+
+        <!-- Terminal Output Area -->
+        <div id="cli-output" class="p-4 h-64 overflow-y-auto custom-scrollbar space-y-1.5 text-slate-300">
+          <div class="text-emerald-400">Bienvenue sur le terminal de mon portfolio RSI.</div>
+          <div class="text-slate-400">Tapez <span class="text-sky-300 font-bold">help</span> pour afficher les commandes disponibles.</div>
+        </div>
+
+        <!-- Command Input Form -->
+        <form onsubmit="handleCliCommand(event)" class="bg-slate-950/80 px-4 py-2.5 border-t border-slate-800 flex items-center gap-2">
+          <span class="text-emerald-400 font-bold">guest@teko:~$</span>
+          <input type="text" id="cli-input" autocomplete="off" placeholder="Tapez une commande (ex: help, projects, skills, contact)..." class="flex-1 bg-transparent border-none text-white focus:outline-none font-mono text-xs">
+          <button type="submit" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800">Entrée</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- COMPETENCES / SKILLS SECTION                             -->
+  <!-- ======================================================== -->
+  <section id="competences" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div class="text-center max-w-2xl mx-auto space-y-2">
+      <span class="text-xs font-mono text-sky-400 uppercase tracking-widest">Boîte à Outils Technique</span>
+      <h2 class="text-3xl font-extrabold text-white">Compétences & Domaines d'Expertise</h2>
+      <p class="text-sm text-slate-400">Maîtrise des protocoles de communication, de l'administration système et des pratiques modernes d'automatisation.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Skill Category 1 -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center">
+          <i data-lucide="network" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Réseaux & Protocoles</h3>
+        <ul class="space-y-2 text-xs text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Modèle OSI & TCP/IP</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Adressage CIDR & VLSM</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Routage, DNS, DHCP, NAT</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Protocoles (HTTP, SSH, FTP)</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Wireshark & Analyse Traces</li>
+        </ul>
+      </div>
+
+      <!-- Skill Category 2 -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Cybersécurité</h3>
+        <ul class="space-y-2 text-xs text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Audit & Port Scanning</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Banner Grabbing & Fingerprint</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Durcissement (Hardening OS)</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Pare-feu (UFW, iptables)</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Cryptographie (AES, SHA, TLS)</li>
+        </ul>
+      </div>
+
+      <!-- Skill Category 3 -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+          <i data-lucide="server" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Systèmes & SRE</h3>
+        <ul class="space-y-2 text-xs text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Linux (Debian, Ubuntu)</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Windows Server & AD</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Gestion des Processus & Signaux</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Métriques CPU/RAM/Disque</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Alerting Proactif & Logs</li>
+        </ul>
+      </div>
+
+      <!-- Skill Category 4 -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center">
+          <i data-lucide="code" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Développement & DevOps</h3>
+        <ul class="space-y-2 text-xs text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Node.js & Javascript</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Python & Bash Scripting</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Architecture REST & SSE</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Docker & Conteneurisation</li>
+          <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Git & Déploiement Continu</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- ABOUT ME SECTION                                         -->
+  <!-- ======================================================== -->
+  <section id="a-propos" class="py-20 bg-slate-900/30 border-t border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <!-- Avatar card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-4 shadow-xl">
+          <div class="w-32 h-32 mx-auto rounded-2xl p-1 bg-gradient-to-tr from-sky-400 via-indigo-500 to-emerald-400 shadow-xl shadow-sky-500/20">
+            <img src="/profile.jpg" alt="Fuller Douala Pierre Yvan" class="w-full h-full object-cover rounded-[14px]">
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-base">Fuller Douala Pierre Yvan</h3>
+            <span class="text-xs text-sky-400 font-mono">Ingénieur RSI & Cybersécurité</span>
+          </div>
+          <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 font-mono">
+            Disponible pour missions & opportunités professionnelles
+          </div>
+        </div>
+
+        <!-- Bio Content -->
+        <div class="md:col-span-2 space-y-4">
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-widest">À Propos de Moi</span>
+          <h2 class="text-3xl font-extrabold text-white">Une Passion pour l'Infrastructure Robuste & Sécurisée</h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Passionné par le fonctionnement intime des réseaux informatiques et la sécurité des systèmes d'information, je développe des solutions logicielles permettant d'automatiser l'audit, d'optimiser l'adressage et de surveiller en direct l'état de santé des serveurs.
+          </p>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Mon approche combine rigueur académique (respect scrupuleux des RFCs et des protocoles de communication) et sens pratique (création d'outils visuels, rapides et exploitables immédiatement par les équipes opérationnelles).
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Orienté Pratique & Lab</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Documentation Soignée</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Sécurité By Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- CONTACT SECTION                                          -->
+  <!-- ======================================================== -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-center">
+    <div class="space-y-2">
+      <span class="text-xs font-mono text-sky-400 uppercase tracking-widest">Prise de Contact</span>
+      <h2 class="text-3xl font-extrabold text-white">Travaillons Ensemble</h2>
+      <p class="text-sm text-slate-400 max-w-lg mx-auto">
+        Vous avez une question sur l'un de mes projets ou souhaitez échanger sur une opportunité de stage / alternance / emploi ?
+      </p>
+    </div>
+
+    <!-- Contact Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left font-mono text-xs">
+      <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+        <i data-lucide="mail" class="w-5 h-5 text-sky-400"></i>
+        <div class="font-bold text-white">Email Direct</div>
+        <a href="mailto:contact@monportfolio-rsi.fr" class="text-slate-400 hover:text-sky-400 truncate block">contact@monportfolio-rsi.fr</a>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+        <i data-lucide="github" class="w-5 h-5 text-emerald-400"></i>
+        <div class="font-bold text-white">GitHub</div>
+        <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-emerald-400 truncate block">github.com/mon-profil</a>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+        <i data-lucide="linkedin" class="w-5 h-5 text-indigo-400"></i>
+        <div class="font-bold text-white">LinkedIn</div>
+        <a href="https://linkedin.com" target="_blank" class="text-slate-400 hover:text-indigo-400 truncate block">linkedin.com/in/mon-profil</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER                                                   -->
+  <!-- ======================================================== -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 text-xs text-slate-500 py-6 text-center font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Portfolio Ingénieur RSI • Conçu pour la présentation de projets d'infrastructure.</p>
+      <p class="text-slate-400">Déployable en 1 clic sur Vercel / GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- MODAL DETAILS PROJET                                     -->
+  <!-- ======================================================== -->
+  <div id="project-modal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto custom-scrollbar">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-3">
+          <div id="modal-icon-bg" class="w-10 h-10 rounded-xl flex items-center justify-center">
+            <i id="modal-icon" data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 id="modal-title" class="font-bold text-white text-lg">Titre Projet</h3>
+            <span id="modal-subtitle" class="text-xs text-slate-400 font-mono">Sous-titre</span>
+          </div>
+        </div>
+        <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-300">
+        <!-- Interactive Live Demonstration Container -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="font-bold text-white uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+              <i data-lucide="play-circle" class="w-4 h-4 text-sky-400"></i>
+              <span>Démonstration Interactive en Direct</span>
+            </h4>
+            <span class="text-[10px] text-emerald-400 font-mono">100% Fonctionnel en Ligne</span>
+          </div>
+          <div id="modal-interactive-demo" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3 font-mono">
+            <!-- Dynamically injected demo -->
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-1">Architecture & Fonctionnement</h4>
+          <p id="modal-description" class="leading-relaxed text-slate-300">Description...</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-1">Points Forts & Notions RSI Validées</h4>
+          <ul id="modal-features" class="space-y-1.5 list-disc list-inside text-slate-400 font-mono">
+            <!-- Features -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-800">
+        <button onclick="closeProjectModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT LOGIC                                         -->
+  <!-- ======================================================== -->
+  <script>
+    lucide.createIcons();
+
+    // Project Details Data
+    const PROJECTS_DETAILS = {
+      netaudit: {
+        title: 'NetAudit — Scanner Réseau & Audit de Vulnérabilités',
+        subtitle: 'Cybersécurité Périmétrique & Découverte Réseau',
+        icon: 'shield-alert',
+        iconClass: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
+        description: 'NetAudit est un outil complet d\'évaluation de la surface d\'attaque réseau. Utilisant des sockets TCP asynchrones ultra-rapides, il sonde les ports, intercepte les bannières protocolaires (SSH, Web, BDD) et évalue automatiquement le niveau de risque avec attribution d\'un score de sécurité (0 à 100). Il intègre également un scanner ARP pour découvrir tous les téléphones et PC connectés au même réseau local Wi-Fi en 1 clic.',
+        features: [
+          'Sondes TCP Three-Way Handshake asynchrones (non bloquantes)',
+          'Banner Grabbing d\'empreinte de service logicielle',
+          'Flux temps réel Server-Sent Events (SSE) affichant les sondes en direct',
+          'Moteur d\'audit de sécurité calculant une note (A, B, C, D, F)',
+          'Générateur de plan d\'actions de durcissement (Hardening)',
+          'Module sous-projet de découverte des adresses IP locales par table ARP'
+        ],
+        command: 'cd projet1_netaudit && node server.js (Port 3000)'
+      },
+      syspulse: {
+        title: 'SysPulse — Dashboard SRE & Supervision Système',
+        subtitle: 'Observabilité Infrastructure & Gestionnaire de Processus',
+        icon: 'activity',
+        iconClass: 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20',
+        description: 'SysPulse transforme n\'importe quelle machine en console de supervision professionnelle temps réel. Il transmet chaque seconde via Server-Sent Events les métriques processeur (détaillées par cœur), l\'utilisation RAM, les débits réseau réels (upload/download en Ko/s) et l\'occupation disque. Son gestionnaire de tâches permet de rechercher les processus et d\'en forcer l\'arrêt sécurisé.',
+        features: [
+          'Flux continu Server-Sent Events cadencé à 1000ms',
+          'Graphiques défilants haute résolution Chart.js (historique 30 secondes)',
+          'Surveillance des métriques SRE fondamentales (Saturation, Trafic)',
+          'Alerting proactif automatique en cas de surcharge CPU/RAM (> 85%)',
+          'Gestionnaire de tâches avec recherche et Kill Process sécurisé (taskkill / SIGKILL)'
+        ],
+        command: 'cd projet2_syspulse && node server.js (Port 3001)'
+      },
+      ipmaster: {
+        title: 'IP-Master — Architecture d\'Adressage IPAM & VLSM',
+        subtitle: 'Ingénierie Réseau, Découpeur VLSM & Heatmap 254 IPs',
+        icon: 'network',
+        iconClass: 'bg-sky-500/10 text-sky-400 border border-sky-500/20',
+        description: 'IP-Master est une solution complète de planification et d\'inventaire d\'adresses IPv4 d\'entreprise. Il effectue les calculs de sous-réseautage CIDR avec visualisation binaire 32-bits de l\'opération ET logique, exécute l\'algorithme d\'optimisation VLSM évitant le gaspillage d\'adresses pour différents départements, et fournit un registre IPAM avec Heatmap interactive des 254 adresses utiles.',
+        features: [
+          'Calculateur CIDR complet avec masquage Wildcard et portées RFC 1918',
+          'Décomposition binaire 32-bits pédagogique (démonstration ET logique)',
+          'Algorithme de découpage VLSM tri décroissant par besoin d\'hôtes',
+          'Matrice d\'occupation visuelle (Heatmap) des 254 adresses /24',
+          'Registre IPAM persistant (JSON) avec détection stricte des conflits d\'adresses'
+        ],
+        command: 'cd projet3_ipmaster && node server.js (Port 3002)'
+      }
+    };
+
+    let modalChartInterval = null;
+    let modalChart = null;
+
+    function openProjectModal(key) {
+      const data = PROJECTS_DETAILS[key];
+      if (!data) return;
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-subtitle').textContent = data.subtitle;
+      document.getElementById('modal-description').textContent = data.description;
+      
+      const iconBg = document.getElementById('modal-icon-bg');
+      iconBg.className = `w-10 h-10 rounded-xl flex items-center justify-center ${data.iconClass}`;
+      document.getElementById('modal-icon').setAttribute('data-lucide', data.icon);
+
+      const featuresList = document.getElementById('modal-features');
+      featuresList.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+
+      // Inject Interactive Demo
+      const demoContainer = document.getElementById('modal-interactive-demo');
+      demoContainer.innerHTML = '';
+      if (modalChartInterval) clearInterval(modalChartInterval);
+      if (modalChart) modalChart.destroy();
+
+      if (key === 'netaudit') {
+        demoContainer.innerHTML = `
+          <div class="space-y-3">
+            <div class="flex flex-col sm:flex-row items-center gap-2">
+              <input type="text" id="demo-target" value="scanme.nmap.org" class="w-full sm:flex-1 px-3 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white">
+              <button onclick="runDemoScan()" id="btn-run-demo-scan" class="w-full sm:w-auto px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition flex items-center justify-center gap-1.5 active:scale-95">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Lancer le Scan</span>
+              </button>
+            </div>
+            <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+              <div id="demo-progress-bar" class="bg-emerald-400 h-full w-0 transition-all duration-200"></div>
+            </div>
+            <div id="demo-terminal" class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] h-28 overflow-y-auto custom-scrollbar text-slate-300 space-y-1">
+              <span class="text-slate-500">// Prêt pour l'audit. Cliquez sur 'Lancer le Scan' pour tester l'analyse TCP.</span>
+            </div>
+          </div>
+        `;
+      } else if (key === 'syspulse') {
+        demoContainer.innerHTML = `
+          <div class="space-y-3">
+            <div class="grid grid-cols-3 gap-2 text-center text-[11px]">
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">CPU Load</span>
+                <strong id="demo-cpu-kpi" class="text-cyan-400 text-sm">28%</strong>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">RAM Usage</span>
+                <strong id="demo-ram-kpi" class="text-violet-400 text-sm">45%</strong>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">Débit RX/TX</span>
+                <strong class="text-emerald-400 text-sm">184 Ko/s</strong>
+              </div>
+            </div>
+            <div class="h-32">
+              <canvas id="demoChartCanvas"></canvas>
+            </div>
+          </div>
+        `;
+        setTimeout(initDemoChart, 100);
+      } else if (key === 'ipmaster') {
+        demoContainer.innerHTML = `
+          <div class="space-y-3">
+            <div class="flex flex-col sm:flex-row items-center gap-2">
+              <input type="text" id="demo-calc-ip" value="192.168.10.45" oninput="runDemoCalc()" class="w-full sm:flex-1 px-3 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white">
+              <select id="demo-calc-prefix" onchange="runDemoCalc()" class="w-full sm:w-28 px-2 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white">
+                <option value="24" selected>/24 (254 hôtes)</option>
+                <option value="26">/26 (62 hôtes)</option>
+                <option value="28">/28 (14 hôtes)</option>
+                <option value="30">/30 (2 hôtes WAN)</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">Adresse Réseau :</span>
+                <strong id="demo-res-net" class="text-sky-400">192.168.10.0</strong>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">Diffusion (Broadcast) :</span>
+                <strong id="demo-res-broad" class="text-indigo-400">192.168.10.255</strong>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">Première IP Utile :</span>
+                <strong id="demo-res-first" class="text-emerald-400">192.168.10.1</strong>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-500 block">Dernière IP Utile :</span>
+                <strong id="demo-res-last" class="text-emerald-400">192.168.10.254</strong>
+              </div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-[10px]">
+              <span class="text-slate-500 block">Opération Binaire ET Logique (Masque 32-bits) :</span>
+              <span id="demo-res-bin" class="text-white block mt-0.5">11000000.10101000.00001010.00000000</span>
+            </div>
+          </div>
+        `;
+        setTimeout(runDemoCalc, 50);
+      }
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      if (modalChartInterval) clearInterval(modalChartInterval);
+      if (modalChart) modalChart.destroy();
+      document.getElementById('project-modal').classList.add('hidden');
+    }
+
+    // Demo NetAudit Scan Simulation
+    function runDemoScan() {
+      const target = document.getElementById('demo-target').value.trim() || 'scanme.nmap.org';
+      const term = document.getElementById('demo-terminal');
+      const bar = document.getElementById('demo-progress-bar');
+      const btn = document.getElementById('btn-run-demo-scan');
+
+      btn.disabled = true;
+      term.innerHTML = `<span class="text-sky-400">[i] Résolution DNS et initialisation des sondes TCP vers ${target}...</span>`;
+      bar.style.width = '20%';
+
+      setTimeout(() => {
+        bar.style.width = '50%';
+        term.innerHTML += `<br><span class="text-emerald-400 font-bold">[+] PORT 22/TCP OUVERT : SSH-2.0-OpenSSH_8.9 (12ms)</span>`;
+      }, 500);
+
+      setTimeout(() => {
+        bar.style.width = '80%';
+        term.innerHTML += `<br><span class="text-emerald-400 font-bold">[+] PORT 80/TCP OUVERT : Apache/2.4.52 (18ms)</span>`;
+      }, 900);
+
+      setTimeout(() => {
+        bar.style.width = '100%';
+        term.innerHTML += `<br><span class="text-amber-400">[!] Vulnérabilité : Port 80 HTTP en clair (Recommandation : Redirection 301 HTTPS)</span>`;
+        term.innerHTML += `<br><span class="text-white font-bold">[✓] Audit achevé ! Score de sécurité calculé : 85/100 (Grade B)</span>`;
+        btn.disabled = false;
+        term.scrollTop = term.scrollHeight;
+      }, 1300);
+    }
+
+    // Demo SysPulse Live Chart
+    function initDemoChart() {
+      const canvas = document.getElementById('demoChartCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      const dataPoints = [22, 25, 24, 28, 30, 26, 32, 29, 35, 28];
+      modalChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: Array(10).fill(''),
+          datasets: [{
+            data: dataPoints,
+            borderColor: '#22d3ee',
+            backgroundColor: 'rgba(34, 211, 238, 0.1)',
+            fill: true,
+            tension: 0.35,
+            borderWidth: 2,
+            pointRadius: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 300 },
+          scales: {
+            y: { min: 0, max: 100, ticks: { display: false }, grid: { color: 'rgba(51, 65, 85, 0.3)' } },
+            x: { display: false }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      modalChartInterval = setInterval(() => {
+        const nextVal = Math.floor(Math.random() * 25) + 20;
+        document.getElementById('demo-cpu-kpi').textContent = nextVal + '%';
+        modalChart.data.datasets[0].data.push(nextVal);
+        modalChart.data.datasets[0].data.shift();
+        modalChart.update('none');
+      }, 1000);
+    }
+
+    // Demo IP-Master Instant Calculator
+    function runDemoCalc() {
+      const ip = (document.getElementById('demo-calc-ip').value || '192.168.1.1').trim();
+      const prefix = parseInt(document.getElementById('demo-calc-prefix').value, 10);
+      const octets = ip.split('.').map(Number);
+
+      if (octets.length === 4 && !octets.some(isNaN)) {
+        const ipInt = (((octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3]) >>> 0);
+        const maskInt = prefix === 0 ? 0 : ((0xFFFFFFFF << (32 - prefix)) >>> 0);
+        const netInt = (ipInt & maskInt) >>> 0;
+        const broadInt = (netInt | ((~maskInt) >>> 0)) >>> 0;
+
+        const toIp = intVal => [(intVal >>> 24) & 255, (intVal >>> 16) & 255, (intVal >>> 8) & 255, intVal & 255].join('.');
+        
+        document.getElementById('demo-res-net').textContent = toIp(netInt);
+        document.getElementById('demo-res-broad').textContent = toIp(broadInt);
+        document.getElementById('demo-res-first').textContent = toIp(netInt + 1);
+        document.getElementById('demo-res-last').textContent = toIp(broadInt - 1);
+        
+        const binStr = (netInt >>> 0).toString(2).padStart(32, '0');
+        document.getElementById('demo-res-bin').textContent = `${binStr.slice(0,8)}.${binStr.slice(8,16)}.${binStr.slice(16,24)}.${binStr.slice(24,32)}`;
+      }
+    }
+
+    function filterCategory(cat) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = ['all', 'sec', 'sys', 'net'];
+      
+      buttons.forEach(b => {
+        const btn = document.getElementById(`filter-btn-${b}`);
+        if (b === cat) {
+          btn.className = 'px-3 py-1.5 rounded-lg bg-sky-600 text-white font-semibold transition shrink-0';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 transition shrink-0';
+        }
+      });
+
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Interactive CLI Terminal
+    function handleCliCommand(e) {
+      e.preventDefault();
+      const input = document.getElementById('cli-input');
+      const val = input.value.trim().toLowerCase();
+      input.value = '';
+
+      if (!val) return;
+
+      appendCliOutput(`fuller@rsi-host:~$ ${val}`, 'text-slate-400');
+
+      switch (val) {
+        case 'help':
+          appendCliOutput(`Commandes disponibles :
+  - projects    : Liste des projets réalisés avec descriptions
+  - skills      : Résumé des compétences réseaux et systèmes
+  - netaudit    : Détails sur le Projet 1 (Scanner Cyber)
+  - syspulse    : Détails sur le Projet 2 (Supervision SRE)
+  - ipmaster    : Détails sur le Projet 3 (IPAM & VLSM)
+  - whoami      : Identité de Fuller Douala Pierre Yvan
+  - contact     : Coordonnées et réseaux
+  - clear       : Effacer l'écran de la console`, 'text-sky-300');
+          break;
+
+        case 'projects':
+          appendCliOutput(`[1] NetAudit  : Scanner réseau TCP, Banner Grabbing & Audit CVE (/netaudit)
+[2] SysPulse  : Supervision temps réel SSE, CPU/RAM charts & Kill task (/syspulse)
+[3] IP-Master : Calculateur CIDR, Découpeur VLSM & Heatmap IPAM (/ipmaster)`, 'text-emerald-400');
+          break;
+
+        case 'skills':
+          appendCliOutput(`Réseaux  : TCP/IP, CIDR/VLSM, DNS, DHCP, Wireshark, Protocoles
+Systèmes : Linux (Debian/Ubuntu), Windows Server, Docker, Nginx
+Sécurité : Reconnaissance, Hardening, CVEs, Pare-feu, Crypto
+DevOps   : Node.js, Python, Bash, SSE, Git`, 'text-indigo-300');
+          break;
+
+        case 'netaudit':
+          appendCliOutput(`NetAudit : Sockets asynchrones, scan de ports, détection de risques, score A-F et découverte ARP Wi-Fi. Accessible sur /netaudit`, 'text-emerald-300');
+          break;
+
+        case 'syspulse':
+          appendCliOutput(`SysPulse : Flux SSE à 1000ms, courbes Chart.js, alertes proactives et gestionnaire de processus. Accessible sur /syspulse`, 'text-indigo-300');
+          break;
+
+        case 'ipmaster':
+          appendCliOutput(`IP-Master : Mathématiques 32-bits, découpe VLSM sans perte, registre IPAM avec Heatmap 254 adresses. Accessible sur /ipmaster`, 'text-sky-300');
+          break;
+
+        case 'whoami':
+          appendCliOutput(`Fuller Douala Pierre Yvan — Ingénieur en Réseaux, Systèmes et Cybersécurité (RSI). Passionné par les infrastructures résilientes, la sécurité offensive/défensive et le SRE.`, 'text-white');
+          break;
+
+        case 'contact':
+          appendCliOutput(`Email : contact@monportfolio-rsi.fr | GitHub : github.com/mon-profil`, 'text-sky-400');
+          break;
+
+        case 'clear':
+          document.getElementById('cli-output').innerHTML = '';
+          return;
+
+        default:
+          appendCliOutput(`Commande non reconnue: "${val}". Tapez "help" pour voir les commandes valides.`, 'text-rose-400');
+          break;
+      }
+    }
+
+    function appendCliOutput(text, colorClass = 'text-slate-300') {
+      const output = document.getElementById('cli-output');
+      const div = document.createElement('div');
+      div.className = `${colorClass} whitespace-pre-wrap font-mono`;
+      div.textContent = text;
+      output.appendChild(div);
+      output.scrollTop = output.scrollHeight;
+    }
+  </script>
+</body>
+</html>
